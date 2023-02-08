@@ -1,0 +1,31 @@
+  ################ Vue Js #############
+##############    https://www.sitepoint.com/vue-3-beginner-guide/  ##################
+ 
+ 1. locally intregrate kore 
+ <script type = "text/javascript" src = "vue.min.js"></script>  
+1.  CDN  https://unpkg.com/vue 
+       
+      1. npm init vue@latest 
+                   OR 
+      1. npm init vue@latest vueproject1
+ cd vueproject1
+ 2. npm install
+ ###### vue --version
+ 3. npm run dev   = project run hobe 
+script = all component import kora hobe 
+templete  = all component k call kora hobe use kora hoi
+style = all style 
+
+  task .finishe = true hole delete button show korbe
+<template>
+  <h1>{{ title }}</h1>
+  <ul>
+    <li v-for="task in tasks" :key="task.id">
+      {{task.id}}.00{{ task.name }}.{{ task.finished }}
+      <div v-if="task.finished">
+            <button>Delete task</button>
+        </div>
+    </li>
+   
+</ul>
+</template>
