@@ -1,0 +1,31 @@
+   ###########
+  1.  <p v-text="addres"></p>
+    v-text == attribute hisabe call kora jai
+ 2.  <div v-html="Hobby"></div> 
+    html ar code show remove hobe <b>,</br>tag show korbe na
+
+<div :class="{active:ifActive,error:!ifActive}"> {{ ocupation }}</div>
+ifActive:true, 
+
+.active{
+  color:red;
+ }
+ .error{
+  color: blue;
+ }
+ 
+ if active = true hoi tahole .active = red color hobe
+error:!ifActive , ifActive ta true na hole == ifActive :false hole
+and error = color:blue hobe 
+
+#########################
+ <h1 v-if="seen">Hello World</h1>
+   return{
+      seen:true,
+
+    }
+ true hole h1 ar content show korbe 
+false hole show korbe na
+ ################# 222222##############
+     <h2 v-false>Hello World without seen</h2> 
+      h1 false hole h2 ar content dekhabe 
