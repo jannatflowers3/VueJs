@@ -1,38 +1,45 @@
 <template>
-hi,{{ name }}
-<p>ocupation {{ ocupation }} ,Address:{{ addres }}</p>
-<p v-text="addres"></p>
-<div v-html="Hobby"></div>
-<div>{{ Hobby }}</div>
-<div v-bind:class="'dynamicClass'"> {{ ocupation }}</div>
-<div id="dynamicId"> {{ ocupation }}</div>
-<div :class="{active:ifActive,error:!ifActive}"> {{ ocupation }}</div>
+<Header/>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row">
+   <Sidebar />
+     <Leftsidebar/>
+  </div>
+</div>
+<Footer/>
+
 </template>
+
 <script>
+import Header from './layouts/header.vue';
+import Footer from './layouts/footer.vue';
+import  Sidebar from './layouts/leftsidebar.vue';
+import Leftsidebar from './layouts/rightsidebar.vue';
 export default{
-  data(){
-    return{
-      name:'jannatul ferdaush',
-      addres:"Kajla",
-      ocupation:"web developer",
-        Hobby:"<br>Coding</br>",
-        ifActive:true,  
-    }
-  }
+    components:{Header,Footer,Sidebar,Leftsidebar},
 }
 </script>
 <style>
-.dynamicClass{
-  color:red;
-}
- #dynamicId{
-  color: aqua;
-  background-color: gray;
- }
- .active{
-  color:red;
- }
- .error{
-  color: blue;
- }
+
+
 </style>
