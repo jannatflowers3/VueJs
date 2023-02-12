@@ -1,0 +1,8 @@
+ ############# 
+
+   1. npm install vue-router
+
+ ###################  axios ############
+       https://www.koderhq.com/tutorial/vue/http-axios/
+
+ 1.npm install axios

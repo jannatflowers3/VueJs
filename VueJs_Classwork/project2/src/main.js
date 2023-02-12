@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';   //application create
+// vue theke file newa hoise tia ./vue dewa hoi nai
 // import App from './components/App.vue'
 // import App from './components/App1.vue'
 // import App from './components/Reactivity.vue'
@@ -11,8 +12,33 @@ import { createApp } from 'vue'
 // import App from './components/Event1.vue'
 // import App from './components/Event2.vue'
 // import App from './components/app.vue'
-import App from './app.vue'
+import App from './app.vue'; //main component
+import {createRouter,createWebHistory} from 'vue-router';
+import Home from "./pages/Home.vue";
+import About from './pages/About.vue';
+import Contact from './pages/Contact.vue';
+import News from './pages/News.vue';
+import Registration from './pages/Registration.vue';
+import Search from './pages/Search.vue';
+
+const routes = [
+     {path: '/',component:Home},
+     {path: '/About',component:About },
+     {path:'/contact',component:Contact},
+     {path:'/news',component:News},
+     {path:'/registration',component:Registration},
+     {path:'/search',component:Search}
+
+     
+]
+
+
+const router =createRouter({
+    history: createWebHistory(),
+    routes,
+    linkActiveClass:'active'
+  })
 
 // import './assets/main.css'
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
