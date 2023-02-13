@@ -5,19 +5,22 @@
 
           <div class="col-sm-12">
             <h1>Search Item</h1>
-            <form   v-on:submit.prevent="search">
+            <form method="post" v-on:submit.prevent="search">
                 <input type="text" v-model="searchItem"/> 
                 <button type="submit">Search</button> 
             </form>
-            {{searchItem}}
-        <div v-for="post in posts" :key="post.id"> 
+            With  {{searchItem}} {{ searchResult.length}}
+            <hr/>
+            <ul> 
+        <li v-for="post in searchResult" :key="post.id"> 
             <h2>{{post.product_name}}</h2>
             <p>Lorem ipsum dolor sit ame.</p>
             <div class="fakeimg">{{post.image}}</div>
                 <h1>{{ post.product_price }}</h1>
             <p> {{post.product_descriptions }} </p>
           
-        </div>
+        </li>
+    </ul>
 
             <!-- {{ posts }} -->
         </div>
@@ -40,7 +43,8 @@ export default{
       .post('http://127.0.0.1:8000/api/search/',{item:this.searchItem})
       .then((response) => {
         // this.posts = response.data;
-        console.log(response)
+        this.searchResult = response.data;
+        console.log(response.data);
       })
         }
     }

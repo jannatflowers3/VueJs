@@ -1,0 +1,13 @@
+  ###########globally ################
+ https://www.koderhq.com/tutorial/vue/environment/
+
+ 1. npm install -g @vue/cli
+ ######## globally project thakbe #############
+ 2. vue create vue_project3
+ = y enter
+=>vue3 enter
+enter dite hobe 
+
+ folder nam e- diye korte hobe _bad practice
+
+3. npm run serve
