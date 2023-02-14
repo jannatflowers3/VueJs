@@ -26,24 +26,14 @@
             <hr class="d-sm-none">
           </div>
           <div class="col-sm-8">
+           
         <div v-for="post in posts" :key="post.id"> 
-            <!-- <h2>{{post.product_name}}</h2> -->
-            <!-- <p>Lorem ipsum dolor sit ame.</p>
+            <h2>{{post.product_name}}</h2>
+            <p>Lorem ipsum dolor sit ame.</p>
             <div class="fakeimg">{{post.image}}</div>
                 <h1>{{ post.product_price }}</h1>
-            <p> {{post.product_descriptions }} </p> -->
-            <table>
-                <tr>
-                    <th>Product Name</th>
-                    <th>Product Price</th>
-                    <th>Product Details</th>
-                </tr>
-                <tr>
-                    <td>{{post.product_name}}</td>
-                    <td>{{ post.product_price }}</td>
-                    <td>{{post.product_descriptions }}</td>
-                </tr>
-            </table>
+            <p> {{post.product_descriptions }} </p>
+            
         </div>
 
             <!-- {{ posts }} -->

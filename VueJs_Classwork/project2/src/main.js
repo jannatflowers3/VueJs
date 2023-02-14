@@ -18,7 +18,7 @@ import Home from "./pages/Home.vue";
 import About from './pages/About.vue';
 import Contact from './pages/Contact.vue';
 import News from './pages/News.vue';
-import Registration from './pages/Registration.vue';
+import Product from './pages/Product.vue';
 import Search from './pages/Search.vue';
 
 const routes = [
@@ -26,7 +26,7 @@ const routes = [
      {path: '/About',component:About },
      {path:'/contact',component:Contact},
      {path:'/news',component:News},
-     {path:'/registration',component:Registration},
+     {path:'/product',component:Product},
      {path:'/search',component:Search}
 
      
