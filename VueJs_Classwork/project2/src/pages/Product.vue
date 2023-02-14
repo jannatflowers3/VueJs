@@ -122,10 +122,10 @@
             </div>
           </div> -->
           <div class="col-12" v-if="isSubmitButton">
-            <button class="btn btn-primary" type="submit" > Submit </button> 
+            <button class="btn btn-primary" type="submit" @click="product_submit()"> Submit </button> 
           </div>
           <div class="col-12" v-if="isUpdateButton">
-            <button class="btn btn-success" type="submit" > Update </button>
+            <button class="btn btn-success" @click="product_update" type="button" > Update </button>
 
           </div>
         </form>
@@ -223,6 +223,22 @@ product_delete(id){
       this.formValues.p_stock = product.product_stock;
       this.formValues.p_catagory = product.product_category;
       this.productList = false;
+    },
+    // product update
+    product_update(){
+
+      axios.put("http://127.0.0.1:8000/api/products"+this.formValues.id,
+      {
+        product_name:this.formValues.p_name,
+      product_descriptions:this.formValues.p_details,
+      product_price:this.formValues.p_price,
+      product_stock:this.formValues.p_stock,
+      product_category:this.formValues.p_catagory,
+      })
+      .then((response) => {
+      this.get_products();
+      alert(response.data);
+    });
     }
 
 }
