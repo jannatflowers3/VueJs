@@ -24,6 +24,11 @@
         <router-link to="/search" class="nav-link ">Search</router-link>
       </li>
       <li class="nav-item">
+    
+        <router-link to="/cart" class="nav-link ">Cart</router-link>
+      </li>
+      
+      <li class="nav-item">
         <router-link to="/contact" class="nav-link">Contact</router-link>
       </li>
       <li class="nav-item">
@@ -46,6 +51,12 @@ import Footer from './layouts/footer.vue';
 // import Leftsidebar from './layouts/rightsidebar.vue';
 export default{
     components:{Header,Footer},
+
+    // methods:{
+    //   increments(){
+    //     $store.state.counter++;
+    //   }
+    // }
 }
 </script>
 <style>
