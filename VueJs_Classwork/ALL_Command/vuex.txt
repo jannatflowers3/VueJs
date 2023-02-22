@@ -1,3 +1,11 @@
    https://www.koderhq.com/tutorial/vue/vuex/
 
 1. npm install vuex@next --save
+
+
+app.js a 
+ // methods:{
+    //   increments(){
+    //     $store.state.counter++;
+    //   }
+    // } 
